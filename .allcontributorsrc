@@ -1,0 +1,23 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "arminnaimi",
+      "name": "Armin Naimi",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/4364977?s=460&u=50c58c155e38401a376205c21264be7e92702bae&v=4",
+      "profile": "https://github.com/arminnaimi",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "gatsby-typescript-tailwind-mdx",
+  "projectOwner": "arminnaimi",
+  "repoType": "github",
+  "repoHost": "https://github.com"
+}

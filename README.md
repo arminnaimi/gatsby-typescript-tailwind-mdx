@@ -2,14 +2,7 @@
 
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
-<p align="center">
-  <a href="https://gatsby-typescript-tailwind-mdx.netlify.com/">
-    <img alt="Gatsby TypeScript Tailwind" src="./docs/logo.svg" width="230" />
-  </a>
-</p>
-<h1 align="center">
-Gatsby TypeScript Tailwind
-</h1>
+# Gatsby TypeScript Tailwind MDX
 
 ## 🚀 Quick start
 

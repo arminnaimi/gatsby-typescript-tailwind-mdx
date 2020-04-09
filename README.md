@@ -11,8 +11,8 @@
     Navigate into your new site’s directory and start it up.
 
     ```zsh
-    git clone https://github.com/impulse/gatsby-typescript-tailwind
-    cd gatsby-typescript-tailwind/
+    git clone https://github.com/arminnaimi/gatsby-typescript-tailwind-mdx
+    cd gatsby-typescript-tailwind-mdx/
     gatsby develop
     ```
 
@@ -44,7 +44,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/arminnaimi"><img src="https://avatars3.githubusercontent.com/u/4364977?s=460&u=50c58c155e38401a376205c21264be7e92702bae&v=4" width="100px;" alt="Armin Naimi"/><br /><sub><b>Armin Naimi</b></sub></a><br /><a href="https://github.com/impulse/gatsby-typescript-tailwind-mdx/commits?author=Armin Naimi" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/arminnaimi"><img src="https://avatars3.githubusercontent.com/u/4364977?s=460&u=50c58c155e38401a376205c21264be7e92702bae&v=4" width="100px;" alt="Armin Naimi"/><br /><sub><b>Armin Naimi</b></sub></a><br /><a href="https://github.com/arminnaimi/gatsby-typescript-tailwind-mdx/commits?author=Armin Naimi" title="Code">💻</a></td>
   </tr>
 </table>
 

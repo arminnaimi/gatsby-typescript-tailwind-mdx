@@ -1,5 +1,114 @@
 @tailwind base;
 
+html {
+  @apply text-black antialiased;
+}
+
+body {
+  @apply min-h-screen bg-white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-serif leading-tight;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  @apply my-4;
+}
+
+h1 {
+  @apply text-3xl font-semibold;
+}
+
+h2 {
+  @apply text-xl font-sans font-semibold;
+}
+
+h3 {
+  @apply text-lg font-sans font-bold;
+}
+
+h4 {
+  @apply text-xl;
+}
+
+h5 {
+  @apply text-lg font-bold;
+}
+
+h6 {
+  @apply text-lg font-semibold;
+}
+
+p {
+  @apply text-base;
+}
+
+a {
+  @apply no-underline text-blue-600;
+}
+
+a:hover {
+  filter: brightness(75%);
+  @apply underline;
+}
+
+blockquote cite {
+  @apply block uppercase font-sans not-italic;
+}
+
+ul li {
+  @apply ml-8 list-disc text-lg font-light font-sans mt-4;
+}
+
+button,
+.button {
+  @apply text-black border-r border-b border-black mb-3 rounded-none text-center px-4 py-2;
+}
+
+button:hover,
+.button:hover {
+  filter: brightness(75%) @apply border-r border-b;
+}
+
+@screen md {
+  h1 {
+    @apply text-4xl;
+  }
+
+  h2 {
+    @apply text-2xl;
+  }
+
+  h3 {
+    @apply text-lg;
+  }
+
+  h4 {
+    @apply text-lg;
+  }
+
+  p {
+    @apply text-lg font-sans font-light;
+  }
+  
+
+  ul li {
+    @apply ml-12;
+  }
+}
+
 @tailwind components;
 
 @tailwind utilities;

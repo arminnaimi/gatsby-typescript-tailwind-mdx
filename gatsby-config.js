@@ -1,29 +1,81 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Typescript Tailwind MDX`,
-    description: `An example config of Gatsby + TypeScript + Tailwind CSS + MDX`,
-    author: `@gatsbyjs`,
+    title: `<site title>`,
+    description: `<site description>`,
+    author: `@armi2n`,
+    titleTemplate: "%s · Site Name",
+    // siteUrl: "<site-url>",
+    // defaultImage: ""
   },
   plugins: [
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-remark-relative-images`,
+    `gatsby-remark-images`,
+    `gatsby-remark-unwrap-images`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `#20617b`,
+        // Disable the loading spinner.
+        showSpinner: false,
+      },
+    },
+    // {
+    //   resolve: "gatsby-plugin-web-font-loader",
+    //   options: {
+    //     typekit: {
+    //       id: "<id>",
+    //       families: ["solitaire-mvb-pro", "adobe-garamond-pro"],
+    //     },
+    //   },
+    // },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `uploads`,
+        path: `${__dirname}/static/uploads`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images/`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `homepage`,
+        path: `${__dirname}/src/content/index.md`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
-        path: `${__dirname}/src/pages/`,
+        path: `${__dirname}/src/content`,
       },
     },
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
+          `gatsby-remark-relative-images`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+              showCaptions: ["title"],
+              markdownCaptions: true,
+            },
+          },
+          `gatsby-remark-unwrap-images`,
+        ],
+        extensions: [`.md`],
       },
     },
     `gatsby-plugin-postcss`,
@@ -35,20 +87,29 @@ module.exports = {
       },
     },
     `gatsby-plugin-typescript`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        // icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-favicon`,
+    //   options: {
+    //     logo: "./src/images/favicon.png",
+    //     appName: "<site title>",
+    //     appDescription: "<site title>",
+    //     lang: "en-US",
+    //     icons: {
+    //       android: true,
+    //       appleIcon: true,
+    //       appleStartup: true,
+    //       favicons: true,
+    //       firefox: true,
+    //     },
+    //   },
+    // },
+    // `gatsby-plugin-sitemap`,
+    // {
+    //   resolve: "gatsby-plugin-robots-txt",
+    //   options: {
+    //     policy: [{ userAgent: "*", allow: "/" }],
+    //   },
+    // },
     {
       resolve: "gatsby-plugin-eslint",
       options: {
@@ -61,8 +122,5 @@ module.exports = {
         },
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }
